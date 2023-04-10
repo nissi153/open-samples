@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Members List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="my-3">Members List</h1>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Member No</th>
+            <th>Member ID</th>
+            <th>Password</th>
+            <th>Phone</th>
+            <th>Join Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="member : ${members}">
+            <td th:text="${member.memberNo}"></td>
+            <td th:text="${member.memberId}"></td>
+            <td th:text="${member.memberPw}"></td>
+            <td th:text="${member.phone}"></td>
+            <td th:text="${member.joinDate}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
